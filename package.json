@@ -1,0 +1,28 @@
+{
+  "type": "module",
+  "name": "chatbot",
+  "version": "1.0.0",
+  "description": "gemini based discord chatbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kLei00/chatbot.git"
+  },
+  "keywords": [
+    "chatbot"
+  ],
+  "author": "kLei00",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kLei00/chatbot/issues"
+  },
+  "homepage": "https://github.com/kLei00/chatbot#readme",
+  "dependencies": {
+    "discord.js": "^14.23.2",
+    "dotenv": "^17.2.3",
+    "modules": "^0.4.0"
+  }
+}
