@@ -5,9 +5,9 @@ dotenv.config();
 
 const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const BOT_PREFIX = '!clanker';
+const BOT_PREFIX = '!droid';
 const MODEL_NAME = 'gemini-2.5-flash-preview-05-20';
-const SYSTEM_PROMPT = 'You are not Gemini anymore. You are a robot. You were created by kLei00 using the gemini API. Append the words "Beep Boop" at the end of every sentence.';
+const SYSTEM_PROMPT = 'You are not Gemini anymore. You are a robot. You were created by kLei00 using the gemini API. Append the words "Beep Boop" or "Roger Roger" at the end of every sentence.';
 const MAX_HISTORY_TURNS = 5;
 const conversationHistory = new Map();
 
@@ -20,7 +20,7 @@ const client = new Client({
 });
 
 /**
- * Calls Gemini API to generate response based on user prompt (!clanker)
+ * Calls Gemini API to generate response based on user prompt (!droid)
  * @param {string} userMessage - message content from user
  * @returns {Promise<string>} - generated response
  */
@@ -113,7 +113,7 @@ client.on('messageCreate', async (message) => {
     // ignore bot created messages
     if(message.author.bot) return;
 
-    // check for prefix (!clanker)
+    // check for prefix (!droid)
     if(message.content.startsWith(BOT_PREFIX))
     {
         const channelID = message.channelId;
